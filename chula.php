@@ -8,9 +8,8 @@
         $cartao = $_POST['cartao'];
         $nasc = $_POST['nasc'];
         $validade = $_POST['validade'];
-        $func = $_POST['func'];
 
-        $result = mysqli_query($conexao, "INSERT INTO inscritos(ctg,nome,cartao,nasc,validade,func) VALUES ('$ctg','$nome','$cartao','$nasc','$validade','$func')");
+        $result = mysqli_query($conexao, "INSERT INTO chula(ctg,nome,cartao,nasc,validade) VALUES ('$ctg','$nome','$cartao','$nasc','$validade')");
 
     }
 ?>
@@ -25,9 +24,9 @@
 </head>
 <body onload="carregar();">
     <div class="box">
-        <form action="index.php" method="post">
+        <form action="chula.php" method="post">
             <fieldset>
-                <legend><b>Inscrição JuvEnart 2025 - Danças Tradicionais</b></legend>
+                <legend><b>Inscrição JuvEnart 2025 - Chula</b></legend>
                 <br>
                 <div class="inputBox">
                     <input type="text" name="ctg" id="ctg" class="inputUser" required>
@@ -55,19 +54,6 @@
                     </div>
                 </div>
                 <div class="botao">
-                    <div>
-                    <p>Função:</p>
-                        <input type="radio" id="dancarino" name="func" value="dancarino" required>
-                        <label for="dancarino">Dançarino</label>
-                        <input type="radio" id="instrutor" name="func" value="instrutor" required>
-                        <label for="dancarino">Instrutor</label>
-                        <input type="radio" id="patronagem" name="func" value="patronagem" required>
-                        <label for="dancarino">Patronagem</label>
-                        <input type="radio" id="coordenacao" name="func" value="coordenacao" required>
-                        <label for="dancarino">Coordenação</label>
-                        <input type="radio" id="assistentes" name="func" value="assistentes" required>
-                        <label for="dancarino">Assistentes</label>
-                    </div>
                         <input type="submit" name="submit" id="submit"> 
                     </div>
             </fieldset>

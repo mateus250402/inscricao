@@ -98,3 +98,12 @@ legend{
     display: flex;
     justify-content: space-evenly;
 }
+
+.dupla{
+    display: flex;
+    justify-content: space-between;
+}
+
+.caixa{
+    width: 40%;
+}
